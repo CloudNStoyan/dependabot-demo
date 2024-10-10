@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - run: echo .${{steps.dependabot-metadata.outputs.directory}}
       - run: npm ci
         working-directory: .${{steps.dependabot-metadata.outputs.directory}}
       - run: npm test
