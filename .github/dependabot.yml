@@ -4,7 +4,17 @@ updates:
     directory: "/first-package"
     schedule:
       interval: "weekly"
+    groups:
+      first-package:
+        applies-to: version-updates
+        patterns:
+          - '*'
   - package-ecosystem: "npm"
     directory: "/second-package"
     schedule:
       interval: "weekly"
+    groups:
+      second-package:
+        applies-to: version-updates
+        patterns:
+          - '*'
