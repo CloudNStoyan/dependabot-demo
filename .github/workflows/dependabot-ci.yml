@@ -16,8 +16,8 @@ jobs:
       - run: npm ci
         # The ideal thing here is to use outputs.directory but currently it doesnt work with groups
         # https://github.com/dependabot/fetch-metadata/issues/489
-        working-directory: .${{steps.dependabot-metadata.outputs.dependency-group}}
+        working-directory: ./${{steps.dependabot-metadata.outputs.dependency-group}}
       - run: npm test
         # The ideal thing here is to use outputs.directory but currently it doesnt work with groups
         # https://github.com/dependabot/fetch-metadata/issues/489
-        working-directory: .${{steps.dependabot-metadata.outputs.dependency-group}}
+        working-directory: ./${{steps.dependabot-metadata.outputs.dependency-group}}
