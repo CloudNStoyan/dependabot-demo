@@ -15,6 +15,6 @@ jobs:
           node-version: 20
       - run: echo ${{steps.dependabot-metadata.outputs.directory}}
       - run: npm ci
-        working-directory: ${{steps.dependabot-metadata.outputs.directory}}
+        working-directory: .${{steps.dependabot-metadata.outputs.directory}}
       - run: npm test
-        working-directory: ${{steps.dependabot-metadata.outputs.directory}}
+        working-directory: .${{steps.dependabot-metadata.outputs.directory}}
