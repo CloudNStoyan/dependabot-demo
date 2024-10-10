@@ -13,8 +13,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: echo .${{steps.dependabot-metadata.outputs.directory}}
       - run: npm ci
-        working-directory: .${{steps.dependabot-metadata.outputs.directory}}
+        # The ideal thing here is to use outputs.directory but currently it doesnt work with groups
+        # https://github.com/dependabot/fetch-metadata/issues/489
+        working-directory: .${{steps.dependabot-metadata.outputs.dependency-group}}
       - run: npm test
-        working-directory: .${{steps.dependabot-metadata.outputs.directory}}
+        # The ideal thing here is to use outputs.directory but currently it doesnt work with groups
+        # https://github.com/dependabot/fetch-metadata/issues/489
+        working-directory: .${{steps.dependabot-metadata.outputs.dependency-group}}
