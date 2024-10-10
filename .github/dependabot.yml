@@ -7,6 +7,10 @@ updates:
     groups:
       first-package:
         applies-to: version-updates
+        update-types:
+          - 'major'
+          - 'patch'
+          - 'minor'
         patterns:
           - '*'
   - package-ecosystem: "npm"
@@ -16,5 +20,9 @@ updates:
     groups:
       second-package:
         applies-to: version-updates
+        update-types:
+          - 'major'
+          - 'patch'
+          - 'minor'
         patterns:
           - '*'
