@@ -1,5 +1,5 @@
 {
-  "name": "dependabot-demo",
+  "name": "dependabot-demo-first-package",
   "version": "0.0.0",
   "private": true,
   "scripts": {
