@@ -4,6 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 20
     versioning-strategy: increase
     groups:
       eslint:
@@ -24,6 +25,7 @@ updates:
     directory: "/first-package"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 20
     versioning-strategy: increase
     groups:
       eslint:
@@ -44,6 +46,7 @@ updates:
     directory: "/second-package"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 20
     versioning-strategy: increase
     groups:
       eslint:
