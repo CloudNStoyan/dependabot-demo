@@ -1,6 +1,26 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: increase
+    groups:
+      eslint:
+        applies-to: version-updates
+        patterns:
+          - 'eslint*'
+        update-types:
+          - "minor"
+          - "patch"
+      all:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - "minor"
+          - "patch"
+  - package-ecosystem: "npm"
     directory: "/first-package"
     schedule:
       interval: "weekly"
