@@ -29,14 +29,14 @@ updates:
       eslint:
         applies-to: version-updates
         patterns:
-          - 'eslint*'
+          - '*eslint*'
         update-types:
           - "minor"
-          - "match"
+          - "patch"
       all:
         applies-to: version-updates
         patterns:
           - '*'
         update-types:
           - "minor"
-          - "match"
+          - "patch"
