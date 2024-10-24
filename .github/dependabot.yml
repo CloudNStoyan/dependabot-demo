@@ -11,13 +11,7 @@ updates:
         applies-to: version-updates
         patterns:
           - 'eslint*'
-        update-types:
-          - "minor"
-          - "patch"
       all:
         applies-to: version-updates
         patterns:
           - '*'
-        update-types:
-          - "minor"
-          - "patch"
