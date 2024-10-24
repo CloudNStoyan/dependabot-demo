@@ -12,14 +12,14 @@ updates:
           - 'eslint*'
         update-types:
           - "minor"
-          - "match"
+          - "patch"
       all:
         applies-to: version-updates
         patterns:
           - '*'
         update-types:
           - "minor"
-          - "match"
+          - "patch"
   - package-ecosystem: "npm"
     directory: "/second-package"
     schedule:
