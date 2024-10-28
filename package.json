@@ -6,10 +6,10 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@vitest/eslint-plugin": "^1.0.0",
-    "eslint": "^9.0.0",
+    "@vitest/eslint-plugin": "^1.1.7",
+    "eslint": "^9.13.0",
     "rimraf": "^5.0.10",
-    "vitest": "^1.4.0",
+    "vitest": "^1.6.0",
     "@arabasta/eslint-plugin-no-testing-library-without-cleanup": "^1.0.0",
     "@arabasta/eslint-plugin-redux-use-app-functions": "^1.0.0",
     "@arabasta/eslint-plugin-report-caught-error": "^1.0.0",
