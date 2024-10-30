@@ -1,10 +1,49 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directories: 
-      - "/"
-      - "/first-package"
-      - "/second-package"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: increase
+    groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: "production"
+        update-types:
+          - 'minor'
+          - 'patch'
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+        update-types:
+          - 'minor'
+          - 'patch'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+  - package-ecosystem: "npm"
+    directory: "/first-package"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: increase
+    groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: "production"
+        update-types:
+          - 'minor'
+          - 'patch'
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+        update-types:
+          - 'minor'
+          - 'patch'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+  - package-ecosystem: "npm"
+    directory: "/second-package"
     schedule:
       interval: "weekly"
     versioning-strategy: increase
