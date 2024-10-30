@@ -2,8 +2,9 @@
   "name": "dependabot-demo-main-project",
   "version": "0.0.0",
   "private": true,
+  "workspaces": ["first-package", "second-package"],
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run --dir=./src"
   },
   "dependencies": {
     "@arabasta/eslint-plugin-no-testing-library-without-cleanup": "^1.0.0",
