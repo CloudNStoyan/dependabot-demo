@@ -4,20 +4,17 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 20
     versioning-strategy: increase
     groups:
-      eslint:
+      production-dependencies:
         applies-to: version-updates
-        patterns:
-          - '*eslint*'
+        dependency-type: "production"
         update-types:
           - 'minor'
           - 'patch'
-      all:
+      development-dependencies:
         applies-to: version-updates
-        patterns:
-          - '*'
+        dependency-type: "development"
         update-types:
           - 'minor'
           - 'patch'
